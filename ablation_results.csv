@@ -1,0 +1,5 @@
+mode,NDCG@10,MRR,Recall@10,latency_ms
+A · Dense Embedding,0.9741,1.0,1.0,78.8
+B · Hybrid BM25+Dense,0.9447,1.0,1.0,47.3
+C · Structural Rerank,0.9724,1.0,1.0,41.7
+D · Full Pipeline,0.9724,1.0,1.0,59.0

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+*.db
+*.sqlite
+*.sqlite3
+*.log
+app_import_check.txt
+data/

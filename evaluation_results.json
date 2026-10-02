@@ -1,0 +1,35 @@
+{
+  "dataset": "CodeLens-CoIR-Benchmark",
+  "chunks_evaluated": 144,
+  "query_count": 6,
+  "results": [
+    {
+      "mode": "A \u00b7 Dense Embedding",
+      "NDCG@10": 0.8075,
+      "MRR": 0.7778,
+      "Recall@10": 1.0,
+      "latency_ms": 86.3
+    },
+    {
+      "mode": "B \u00b7 Hybrid BM25+Dense",
+      "NDCG@10": 0.7797,
+      "MRR": 0.7407,
+      "Recall@10": 1.0,
+      "latency_ms": 184.8
+    },
+    {
+      "mode": "C \u00b7 Structural Rerank",
+      "NDCG@10": 0.7324,
+      "MRR": 0.7222,
+      "Recall@10": 0.8333,
+      "latency_ms": 191.9
+    },
+    {
+      "mode": "D \u00b7 Full Pipeline",
+      "NDCG@10": 0.7261,
+      "MRR": 0.7222,
+      "Recall@10": 0.8333,
+      "latency_ms": 87.9
+    }
+  ]
+}

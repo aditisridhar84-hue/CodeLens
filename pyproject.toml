@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codelens-ai"
+version = "0.1.0"
+description = "CodeLens / CodeTrace AI: git-aware code retrieval and benchmarking"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "CodeLens" }]
+license = { text = "MIT" }
+keywords = ["code retrieval", "search", "git", "benchmark", "ai"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: FastAPI",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "sentence-transformers>=3.0.0",
+    "rank-bm25>=0.2.2",
+    "scikit-learn>=1.4.0",
+    "numpy>=1.24.0",
+    "datasets>=3.0.0",
+    "streamlit>=1.35.0",
+    "huggingface-hub>=0.23.0",
+    "tqdm>=4.66.0",
+    "pandas>=2.0.0",
+    "fastapi>=0.111.0",
+    "uvicorn>=0.30.0",
+    "networkx>=3.3",
+    "gitpython>=3.1",
+]
+
+[project.scripts]
+codelens = "codetrace.__main__:main"
+codetrace = "codetrace.__main__:main"
+
+[tool.setuptools]
+packages = ["codetrace", "codelens"]

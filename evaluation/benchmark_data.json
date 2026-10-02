@@ -1,0 +1,62 @@
+{
+  "dataset_name": "CodeLens-CoIR-Benchmark",
+  "version": "1.0.0",
+  "queries": [
+    {
+      "id": "q1",
+      "query": "How is the input normalized before the main function?",
+      "intent": "DATA_FLOW",
+      "target_symbols": ["normalize_input", "clean_data", "normalize", "preprocess"],
+      "target_files": ["src/preprocess.py", "src/processor.py"],
+      "relationship": "before"
+    },
+    {
+      "id": "q2",
+      "query": "Where is authentication handled?",
+      "intent": "FUNCTION_LOOKUP",
+      "target_symbols": ["authenticate_user", "authenticateUser", "verify_token"],
+      "target_files": ["src/auth.py", "src/auth.js"],
+      "relationship": "defines"
+    },
+    {
+      "id": "q3",
+      "query": "Which function validates the user before login?",
+      "intent": "FUNCTION_LOOKUP",
+      "target_symbols": ["validate_user", "validate", "check_credentials"],
+      "target_files": ["src/auth.py", "src/validation.py"],
+      "relationship": "before"
+    },
+    {
+      "id": "q4",
+      "query": "What changed in the authentication code?",
+      "intent": "VERSION_CHANGE",
+      "target_symbols": ["authenticate_user", "verify_token"],
+      "target_files": ["src/auth.py"],
+      "relationship": "evolution"
+    },
+    {
+      "id": "q5",
+      "query": "Show me the code responsible for preprocessing input.",
+      "intent": "IMPLEMENTATION",
+      "target_symbols": ["preprocess_input", "clean_data", "normalize_input"],
+      "target_files": ["src/preprocess.py"],
+      "relationship": "implementation"
+    },
+    {
+      "id": "q6",
+      "query": "Which function calls verify_token?",
+      "intent": "CALL_FLOW",
+      "target_symbols": ["authenticate_user", "authorize_request"],
+      "target_files": ["src/auth.py"],
+      "relationship": "calls"
+    },
+    {
+      "id": "q7",
+      "query": "What code runs after authentication?",
+      "intent": "CALL_FLOW",
+      "target_symbols": ["create_session", "redirect_dashboard"],
+      "target_files": ["src/session.py"],
+      "relationship": "after"
+    }
+  ]
+}

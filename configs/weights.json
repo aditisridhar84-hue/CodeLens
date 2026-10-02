@@ -1,0 +1,42 @@
+{
+  "DATA_FLOW": {
+    "semantic": 0.30,
+    "bm25": 0.15,
+    "symbol": 0.10,
+    "operation": 0.20,
+    "call": 0.20,
+    "structure": 0.05
+  },
+  "DEPENDENCY": {
+    "semantic": 0.25,
+    "bm25": 0.15,
+    "symbol": 0.15,
+    "operation": 0.10,
+    "call": 0.35,
+    "structure": 0.00
+  },
+  "IMPLEMENTATION": {
+    "semantic": 0.25,
+    "bm25": 0.25,
+    "symbol": 0.30,
+    "operation": 0.10,
+    "call": 0.05,
+    "structure": 0.05
+  },
+  "BEHAVIOR": {
+    "semantic": 0.35,
+    "bm25": 0.15,
+    "symbol": 0.10,
+    "operation": 0.15,
+    "call": 0.10,
+    "structure": 0.15
+  },
+  "DEFAULT": {
+    "semantic": 0.30,
+    "bm25": 0.20,
+    "symbol": 0.15,
+    "operation": 0.15,
+    "call": 0.10,
+    "structure": 0.10
+  }
+}
